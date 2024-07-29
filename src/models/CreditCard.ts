@@ -1,4 +1,4 @@
-import { BillingAddress } from './CreateOrder.js';
+import { BillingAddress } from '../interfaces/CreateOrder.js';
 import { CustomerFull } from './Customer.js';
 
 export interface CreditCardFull {

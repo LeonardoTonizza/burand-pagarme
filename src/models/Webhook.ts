@@ -1,4 +1,4 @@
-import { WebhookType } from '@typings/pagarme/WebhookType.js';
+import { WebhookType } from "../typings/WebhookType.js";
 
 interface Customer {
   code: string;
