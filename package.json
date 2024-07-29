@@ -20,11 +20,11 @@
   "types": "./lib/index.d.ts",
   "dependencies": {
     "@burand/functions": ">=3.0.0",
-    "got": ">=14.0.0"
+    "got": ">=14.0.0",
+    "tsyringe": ">=4.0.0"
   },
   "devDependencies": {
-    "@burand/eslint-config-functions": "^3.0.0",
-    "eslint": "^8.0.0",
+    "@biomejs/biome": "^1.8.3",
     "prettier": "^3.0.0",
     "rimraf": "^5.0.0",
     "typescript": "^5.0.0"
