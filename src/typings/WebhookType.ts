@@ -1,5 +1,6 @@
 export type WebhookType =
   | 'order.canceled'
+  | 'order.created'
   | 'order.paid'
   | 'order.payment_failed'
   | 'charge.antifraud_approved'
@@ -9,6 +10,7 @@ export type WebhookType =
   | 'charge.chargedback'
   | 'charge.overpaid'
   | 'charge.paid'
+  | 'charge.created'
   | 'charge.partial_canceled'
   | 'charge.payment_failed'
   | 'charge.pending'

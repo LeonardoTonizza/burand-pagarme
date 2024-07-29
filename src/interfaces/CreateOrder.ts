@@ -19,7 +19,7 @@ interface CreditCard {
   installments: number;
   card_id: string;
   card: Card;
-  card_token?: string;
+  card_token: string;
 }
 
 interface Pix {

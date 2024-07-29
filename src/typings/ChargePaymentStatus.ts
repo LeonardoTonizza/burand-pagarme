@@ -1,6 +1,7 @@
 export type ChargePaymentStatus =
   | 'paid'
   | 'failed'
+  | 'created'
   | 'pending'
   | 'processing'
   | 'canceled'

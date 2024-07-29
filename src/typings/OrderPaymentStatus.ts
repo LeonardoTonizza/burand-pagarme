@@ -1,1 +1,1 @@
-export type OrderPaymentStatus = 'pending' | 'paid' | 'canceled' | 'failed';
+export type OrderPaymentStatus = 'created' | 'pending' | 'paid' | 'canceled' | 'failed';
