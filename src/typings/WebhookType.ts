@@ -1,0 +1,18 @@
+export type WebhookType =
+  | 'order.canceled'
+  | 'order.paid'
+  | 'order.payment_failed'
+  | 'charge.antifraud_approved'
+  | 'charge.antifraud_manual'
+  | 'charge.antifraud_pending'
+  | 'charge.antifraud_reproved'
+  | 'charge.chargedback'
+  | 'charge.overpaid'
+  | 'charge.paid'
+  | 'charge.partial_canceled'
+  | 'charge.payment_failed'
+  | 'charge.pending'
+  | 'charge.processing'
+  | 'charge.refunded'
+  | 'charge.underpaid'
+  | 'charge.updated';
