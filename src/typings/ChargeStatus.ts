@@ -1,4 +1,4 @@
-export type ChargePaymentStatus =
+export type ChargeStatus =
   | 'paid'
   | 'failed'
   | 'created'

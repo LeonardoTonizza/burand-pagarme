@@ -1,10 +1,11 @@
-import { BillingAddress, Customer } from '@interfaces/pagarme/CreateOrder.js';
-import { CreditCardFull, CreditCardList } from '@interfaces/pagarme/CreditCard.js';
-import { CustomerFull, CustomerList } from '@interfaces/pagarme/Customer.js';
-import { PlanData } from '@interfaces/pagarme/Plan.js';
 import got, { Got } from 'got';
 import { env } from 'node:process';
 import { singleton } from 'tsyringe';
+
+import { BillingAddress, Customer } from '../interfaces/CreateOrder.js';
+import { CreditCardFull, CreditCardList } from '../models/CreditCard.js';
+import { CustomerFull, CustomerList } from '../models/Customer.js';
+import { PlanData } from '../models/Plan.js';
 
 export type ListClientsResponse = { data: CustomerList[]; pagiing: { total: number; next: string } };
 export type ListCreditCardResponse = { data: CreditCardList[]; pagiing: { total: number; next: string } };

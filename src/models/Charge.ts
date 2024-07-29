@@ -1,6 +1,6 @@
-import { ChargePaymentStatus } from "../typings/ChargePaymentStatus.js";
+import { ChargeStatus } from '../typings/ChargeStatus.js';
 
 export interface Charge {
   code: string;
-  status: ChargePaymentStatus;
+  status: ChargeStatus;
 }

@@ -2,7 +2,7 @@ import got, { Got } from 'got';
 import { env } from 'node:process';
 import { singleton } from 'tsyringe';
 
-import { Charge } from '@interfaces/pagarme/Charge.js';
+import { Charge } from '../models/Charge.js';
 
 @singleton()
 export class PagarmeChargeRepository {

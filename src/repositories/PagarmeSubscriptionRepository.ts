@@ -2,8 +2,8 @@ import got, { Got } from 'got';
 import { env } from 'node:process';
 import { singleton } from 'tsyringe';
 
-import { CreateSubscription } from '@interfaces/pagarme/CreateSubscription.js';
-import { SubscriptionCreated } from '@interfaces/pagarme/SubscriptionCreated.js';
+import { CreateSubscription } from '../interfaces/CreateSubscription.js';
+import { SubscriptionCreated } from '../interfaces/SubscriptionCreated.js';
 
 @singleton()
 export class PagarmeSubscriptionRepository {

@@ -1,6 +1,6 @@
-import { OrderPaymentStatus } from "../typings/OrderPaymentStatus.js";
+import { OrderStatus } from '../typings/OrderStatus.js';
 
 export interface Order {
   code: string;
-  status: OrderPaymentStatus;
+  status: OrderStatus;
 }

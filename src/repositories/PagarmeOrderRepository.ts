@@ -2,9 +2,9 @@ import got, { Got } from 'got';
 import { env } from 'node:process';
 import { singleton } from 'tsyringe';
 
-import { CreateOrder, MethodTypes } from '@interfaces/pagarme/CreateOrder.js';
-import { Order } from '@interfaces/pagarme/Order.js';
-import { OrderCreated } from '@interfaces/pagarme/OrderCreated.js';
+import { CreateOrder, MethodTypes } from '../interfaces/CreateOrder.js';
+import { OrderCreated } from '../interfaces/OrderCreated.js';
+import { Order } from '../models/Order.js';
 
 @singleton()
 export class PagarmeOrderRepository {
