@@ -1,5 +1,3 @@
-export * from '../interfaces/Address.js';
-export * from '../interfaces/Phones.js';
 export * from './Card.js';
 export * from './Charge.js';
 export * from './CreateCard.js';
