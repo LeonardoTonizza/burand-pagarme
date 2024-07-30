@@ -1,6 +1,7 @@
 import { SubscriptionStatus } from '../typings/SubscriptionStatus.js';
-import { PagarmeModel } from './PagarmeModel.js';
 
-export interface Subscription extends PagarmeModel {
+export interface Subscription {
+  id: string;
+  code: string;
   status: SubscriptionStatus;
 }

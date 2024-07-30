@@ -1,6 +1,6 @@
 import { singleton } from 'tsyringe';
 
-import { CreateSubscription } from '../dtos/CreateSubscriptionDTO.js';
+import { CreateSubscription } from '../models/CreateSubscription.js';
 import { Subscription } from '../models/Subscription.js';
 import { PagarmeAbstract } from './PagarmeAbstract.js';
 

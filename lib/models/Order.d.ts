@@ -1,9 +1,10 @@
 import { OrderStatus } from '../typings/OrderStatus.js';
+import { PaymentMethod } from '../typings/PaymentMethod.js';
 import { Charge } from './Charge.js';
 import { OrderItem } from './OrderItem.js';
-export interface Order {
+export interface Order<T extends PaymentMethod> {
     amount: number;
-    charges?: Charge[];
+    charges: Charge<T>[];
     closed_at?: string;
     closed: boolean;
     code: string;
