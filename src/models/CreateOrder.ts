@@ -5,7 +5,8 @@ import { CreateOrderItem } from './CreateOrderItem.js';
 
 export interface CreateOrder<T extends PaymentMethod> {
   code: string;
-  customer: CreateCustomer;
+  customer_id?: string;
+  customer?: CreateCustomer;
   ip: string;
   items: CreateOrderItem[];
   payments: CreatePayment<T>[];

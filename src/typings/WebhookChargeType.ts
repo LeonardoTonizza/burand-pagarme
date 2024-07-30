@@ -1,8 +1,4 @@
-export type WebhookType =
-  | 'order.canceled'
-  | 'order.created'
-  | 'order.paid'
-  | 'order.payment_failed'
+export type WebhookChargeType =
   | 'charge.antifraud_approved'
   | 'charge.antifraud_manual'
   | 'charge.antifraud_pending'

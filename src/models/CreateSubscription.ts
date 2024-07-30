@@ -1,13 +1,20 @@
-import { PaymentMethod } from '../typings/PaymentMethod.js';
 import { CreateCard } from './CreateCard.js';
 import { CreateCustomer } from './CreateCustomer.js';
+import { CreateSubscriptionItem } from './CreateSubscriptionItem.js';
 
 export interface CreateSubscription {
-  customer: CreateCustomer;
-  card: CreateCard;
-  code: string;
-  payment_method: PaymentMethod;
+  billing_type?: 'prepaid';
   card_id?: string;
   card_token?: string;
-  plan_id: string;
+  card?: CreateCard;
+  code: string;
+  customer_id?: string;
+  customer?: CreateCustomer;
+  installments?: number;
+  interval_count?: number;
+  interval?: 'month';
+  items?: CreateSubscriptionItem[];
+  payment_method: string;
+  plan_id?: string;
+  statement_descriptor?: string;
 }

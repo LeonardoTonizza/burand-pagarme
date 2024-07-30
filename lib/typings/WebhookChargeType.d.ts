@@ -1,0 +1,1 @@
+export type WebhookChargeType = 'charge.antifraud_approved' | 'charge.antifraud_manual' | 'charge.antifraud_pending' | 'charge.antifraud_reproved' | 'charge.chargedback' | 'charge.overpaid' | 'charge.paid' | 'charge.created' | 'charge.partial_canceled' | 'charge.payment_failed' | 'charge.pending' | 'charge.processing' | 'charge.refunded' | 'charge.underpaid' | 'charge.updated';
