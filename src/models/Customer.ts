@@ -10,6 +10,6 @@ export interface Customer extends PagarmeModel {
   email: string;
   metadata?: unknown;
   name: string;
-  phones?: Phones;
+  phones: Partial<Phones>;
   type: 'individual' | 'company';
 }
