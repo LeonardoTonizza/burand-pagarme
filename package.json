@@ -4,7 +4,7 @@
   "description": "Fornece métodos essenciais para a manipulação do Pagarme.",
   "scripts": {
     "clean": "rimraf lib",
-    "lint": "tsc --noEmit && eslint --ext .js,.ts .",
+    "lint": "tsc --noEmit && biome lint ./src",
     "build": "npm run clean && tsc"
   },
   "homepage": "https://github.com/flavianoredressa/burand-functions",

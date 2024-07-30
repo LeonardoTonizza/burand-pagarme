@@ -1,36 +1,21 @@
-import got, { Got } from 'got';
-import { env } from 'node:process';
 import { singleton } from 'tsyringe';
 
-import { CreateOrder, MethodTypes } from '../interfaces/CreateOrder.js';
-import { OrderCreated } from '../interfaces/OrderCreated.js';
+import { CreateOrderDTO, MethodTypes } from '../dtos/CreateOrderDTO.js';
 import { Order } from '../models/Order.js';
+import { PagarmeRepository } from './PagarmeRepository.js';
 
 @singleton()
-export class PagarmeOrderRepository {
-  private readonly api: Got;
-
-  constructor() {
-    this.api = got.extend({
-      prefixUrl: 'https://api.pagar.me/core/v5/',
-      username: env.PAGARME_SECRET_KEY,
-      password: '',
-      timeout: {
-        request: 30_000 // 30 seconds
-      },
-      responseType: 'json'
+export class PagarmeOrderRepository extends PagarmeRepository {
+  async create<T extends MethodTypes>(order: CreateOrderDTO<T>): Promise<Order> {
+    return this.api.post<Order>('orders', {
+      json: order,
+      resolveBodyOnly: true
     });
   }
 
-  async create<T extends MethodTypes>(order: CreateOrder<T>): Promise<OrderCreated<T>> {
-    return this.api
-      .post('orders', {
-        json: order
-      })
-      .json();
-  }
-
   getById(id: string): Promise<Order> {
-    return this.api.get(`orders/${id}`).json();
+    return this.api.get<Order>(`orders/${id}`, {
+      resolveBodyOnly: true
+    });
   }
 }

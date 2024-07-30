@@ -1,30 +1,15 @@
-export interface CustomerFull {
-  id: string;
-  name: string;
-  email: string;
-  gender: string;
-  delinquent: boolean;
+import { Address } from '../interfaces/Address.js';
+import { Phones } from '../interfaces/Phones.js';
+import { PagarmeModel } from './PagarmeModel.js';
+
+export interface Customer extends PagarmeModel {
   address: Address;
-  created_at: string;
-  updated_at: string;
-  metadata: Metadata;
+  code: string;
+  delinquent: boolean;
+  document: string;
+  email: string;
+  metadata: unknown;
+  name: string;
+  phones: Phones;
+  type: string;
 }
-
-interface Metadata {
-  company: string;
-}
-
-interface Address {
-  id: string;
-  line_1: string;
-  line_2: string;
-  zip_code: string;
-  city: string;
-  state: string;
-  country: string;
-  status: string;
-  created_at: string;
-  updated_at: string;
-}
-
-export type CustomerList = Omit<CustomerFull, 'address' | 'phones' | 'metadata' | 'type'>;
