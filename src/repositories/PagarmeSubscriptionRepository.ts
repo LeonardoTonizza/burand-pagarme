@@ -12,4 +12,8 @@ export class PagarmeSubscriptionRepository extends PagarmeAbstract {
       resolveBodyOnly: true
     });
   }
+
+  async delete(id: string): Promise<void> {
+    await this.api.delete<void>(`subscriptions/${id}`);
+  }
 }
