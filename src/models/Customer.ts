@@ -3,13 +3,13 @@ import { Phones } from '../interfaces/Phones.js';
 import { PagarmeModel } from './PagarmeModel.js';
 
 export interface Customer extends PagarmeModel {
-  address: Address;
+  address?: Address;
   code: string;
-  delinquent: boolean;
-  document: string;
+  document_type?: 'CPF' | 'CNPJ' | 'PASSPORT';
+  document?: string;
   email: string;
-  metadata: unknown;
+  metadata?: unknown;
   name: string;
-  phones: Phones;
-  type: string;
+  phones?: Phones;
+  type: 'individual' | 'company';
 }

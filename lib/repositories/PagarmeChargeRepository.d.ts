@@ -1,5 +1,5 @@
 import { Charge } from '../models/Charge.js';
-import { PagarmeRepository } from './PagarmeRepository.js';
-export declare class PagarmeChargeRepository extends PagarmeRepository {
+import { PagarmeAbstract } from './PagarmeAbstract.js';
+export declare class PagarmeChargeRepository extends PagarmeAbstract {
     getById(id: string): Promise<Charge>;
 }

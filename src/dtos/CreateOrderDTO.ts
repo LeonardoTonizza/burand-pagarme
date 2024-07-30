@@ -1,5 +1,5 @@
+import { Customer } from '../models/Customer.js';
 import { CardDTO } from './CardDTO.js';
-import { CreateCustomerDTO } from './CreateCustomerDTO.js';
 import { CreateOrderItemDTO } from './CreateOrderItemDTO.js';
 
 interface Boleto {
@@ -35,7 +35,7 @@ type PaymentMethod<T extends MethodTypes> = {
 
 export interface CreateOrderDTO<T extends MethodTypes> {
   code: string;
-  customer: CreateCustomerDTO;
+  customer: Customer;
   ip: string;
   items: CreateOrderItemDTO[];
   payments: PaymentMethod<T>[];

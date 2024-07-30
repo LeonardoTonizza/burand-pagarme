@@ -1,7 +1,7 @@
 import got, { Got } from 'got';
 import { env } from 'node:process';
 
-export abstract class PagarmeRepository {
+export abstract class PagarmeAbstract {
   protected readonly api: Got;
 
   constructor() {

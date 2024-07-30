@@ -2,10 +2,10 @@ import { singleton } from 'tsyringe';
 
 import { CreateOrderDTO, MethodTypes } from '../dtos/CreateOrderDTO.js';
 import { Order } from '../models/Order.js';
-import { PagarmeRepository } from './PagarmeRepository.js';
+import { PagarmeAbstract } from './PagarmeAbstract.js';
 
 @singleton()
-export class PagarmeOrderRepository extends PagarmeRepository {
+export class PagarmeOrderRepository extends PagarmeAbstract {
   async create<T extends MethodTypes>(order: CreateOrderDTO<T>): Promise<Order> {
     return this.api.post<Order>('orders', {
       json: order,

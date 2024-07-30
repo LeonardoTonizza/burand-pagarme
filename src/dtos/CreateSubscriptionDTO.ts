@@ -1,10 +1,10 @@
+import { Customer } from '../models/Customer.js';
 import { CardDTO } from './CardDTO.js';
-import { CreateCustomerDTO } from './CreateCustomerDTO.js';
 
 export interface CreateSubscription {
   code: string;
   plan_id: string;
-  customer: CreateCustomerDTO;
+  customer: Customer;
   payment_method: 'credit_card';
   card_id: string;
   card: CardDTO;

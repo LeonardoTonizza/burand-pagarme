@@ -1,14 +1,14 @@
 import { DocumentNotFoundError } from '@burand/functions/exceptions';
 import { singleton } from 'tsyringe';
 
-import { CreateCustomerDTO } from '../dtos/CreateCustomerDTO.js';
 import { List } from '../interfaces/List.js';
 import { Customer } from '../models/Customer.js';
-import { PagarmeRepository } from './PagarmeRepository.js';
+import { AddDocument } from '../typings/AddDocument.js';
+import { PagarmeAbstract } from './PagarmeAbstract.js';
 
 @singleton()
-export class PagarmeCustomerRepository extends PagarmeRepository {
-  async create(data: CreateCustomerDTO): Promise<Customer> {
+export class PagarmeCustomerRepository extends PagarmeAbstract {
+  async create(data: AddDocument<Customer>): Promise<Customer> {
     return this.api.post<Customer>('customers', {
       json: data,
       resolveBodyOnly: true

@@ -1,5 +1,5 @@
 import { Plan } from '../models/Plan.js';
-import { PagarmeRepository } from './PagarmeRepository.js';
-export declare class PagarmePlanRepository extends PagarmeRepository {
+import { PagarmeAbstract } from './PagarmeAbstract.js';
+export declare class PagarmePlanRepository extends PagarmeAbstract {
     getAll(): Promise<Plan[]>;
 }
