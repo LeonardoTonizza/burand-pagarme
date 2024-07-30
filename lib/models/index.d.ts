@@ -13,3 +13,4 @@ export * from './OrderItem.js';
 export * from './Plan.js';
 export * from './Subscription.js';
 export * from './Transaction.js';
+export * from './Webhook.js';
