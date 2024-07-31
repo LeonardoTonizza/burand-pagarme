@@ -1,7 +1,7 @@
 import { ChargeStatus } from '../typings/ChargeStatus.js';
 import { LastTransaction } from '../typings/LastTransaction.js';
 import { PaymentMethod } from '../typings/PaymentMethod.js';
-export interface Charge<T extends PaymentMethod> {
+export interface Charge<T extends PaymentMethod = PaymentMethod> {
     amount: number;
     canceled_amount?: number | null;
     code: string;

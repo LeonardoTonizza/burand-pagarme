@@ -1,5 +1,6 @@
 import { Transaction } from './Transaction.js';
 export interface TransactionBoleto extends Transaction {
+    transaction_type: 'boleto';
     url: string;
     pdf: string;
     line: string;
