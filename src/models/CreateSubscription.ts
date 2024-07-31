@@ -8,6 +8,7 @@ export interface CreateSubscription {
   card_token?: string;
   card?: CreateCard;
   code: string;
+  currency?: 'BRL';
   customer_id?: string;
   customer?: CreateCustomer;
   installments?: number;
