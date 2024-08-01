@@ -23,7 +23,7 @@ export function ensurePagarMeRequest(request: Request, _: Response, nextFunction
 
   const [user, password] = Buffer.from(token, 'base64').toString().split(':');
 
-  if (env.PAGARME_USER !== user || env.PAGARME_PASSWORD !== password) {
+  if (env.PAGARME_AUTH_USER !== user || env.PAGARME_AUTH_PASSWORD !== password) {
     throw new ApiError('Invalid token', 'application/invalid-token', 401);
   }
 
